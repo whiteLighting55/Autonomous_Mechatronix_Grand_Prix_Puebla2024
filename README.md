@@ -10,4 +10,4 @@ Developers:
 
 Feel free to use them as examples in your code
 
-Att: # Campus tampico
+Att: Manuel Alejandro Franco Flores, captain of **blue dragons**, the team of programmers of campus Tampico
