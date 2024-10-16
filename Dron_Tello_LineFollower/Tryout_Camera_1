@@ -1,0 +1,33 @@
+'''code for a fisrt camera test, still no functionality, but its a great start'''
+
+#libraries
+import cv2
+
+#defining a variable with the value of the camera
+camera = cv2.VideoCapture(0)
+
+#an error message if the camera is not available
+if not camera.isOpened():
+    print("Error al abrir la cámara")
+    exit()
+
+#main loop for the program to execute undefinitelly
+while True:
+    ret, frame = camera.read()
+
+    #another error message, in case something happens
+    if not ret:
+        print("Error al capturar la imagen")
+        break
+
+    #to show the image
+    cv2.imshow('Imagen de la cámara', frame)
+
+    #to exit the program pulsing 'q' 
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+#finish actions, to clear the screen and release the camera
+#they also save RAM
+camera.release()
+cv2.destroyAllWindows()
