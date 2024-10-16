@@ -23,7 +23,7 @@ while True:
     #to show the image
     cv2.imshow('Imagen de la cámara', frame)
 
-    #to exit the program pulsing 'q' 
+    #to exit the program pulsing "q"
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
